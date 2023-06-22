@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  myspec(icon, text) {
+  myspec(image, text) {
     return Container(
         width: 105,
         height: 115,
@@ -33,9 +33,14 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(icon, color: Colors.white),
+                // Icon(icon, color: Colors.white),
+                Image.asset(image, width: 35, height: 35),
                 SizedBox(height: 10),
-                Text(text, style: TextStyle(color: Colors.white, fontSize: 15))
+                Text(
+                  text,
+                  style: TextStyle(color: Colors.white, fontSize: 15),
+                  textAlign: TextAlign.center,
+                )
               ],
             ))));
   }
@@ -141,57 +146,109 @@ class _HomePageState extends State<HomePage> {
           return Container(
               margin: EdgeInsets.only(left: 20, right: 20, top: 30),
               height: 500,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      myAchiev("10", " Projects"),
-                      myAchiev("2", " Clients"),
-                      myAchiev("50", " Messages"),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Text("Specialized In",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          myspec(Icons.android, "Android"),
-                          myspec(Icons.ios_share, "IOS"),
-                          myspec(Icons.android, "Android")
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          myspec(Icons.android, "Android"),
-                          myspec(Icons.android, "Android"),
-                          myspec(Icons.android, "Android")
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          myspec(Icons.android, "Android"),
-                          myspec(Icons.android, "Android"),
-                          myspec(Icons.android, "Android")
-                        ],
-                      ),
-                    ],
-                  )
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        myAchiev("10", " Projects"),
+                        myAchiev("2", " Clients"),
+                        myAchiev("100+", " Tasks"),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text("Specialized In",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            myspec("assets/images/flutter.png", "Flutter"),
+                            myspec("assets/images/dart.png", "Dart"),
+                            myspec("assets/images/api.jpg", "Rest API's")
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            myspec("assets/images/mac.png", "MAC"),
+                            myspec("assets/images/windows.png", "Windows"),
+                            myspec("assets/images/linux.png", "Linux (Basic)")
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            myspec("assets/images/android.png", "Android"),
+                            myspec("assets/images/ios.png", "iOS"),
+                            myspec("assets/images/github.webp", "GitHub")
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            myspec("assets/images/firebase.webp", "Firebase"),
+                            myspec("assets/images/socket.png",
+                                "Socket Connection"),
+                            myspec("assets/images/stateManagement.png",
+                                "State Management")
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            myspec("assets/images/figma.png", "UI/UX Design"),
+                            myspec("assets/images/json.png", "JSON"),
+                            myspec("assets/images/giticon.png", "Git")
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            myspec("assets/images/vscode.webp", "VS Code"),
+                            myspec("assets/images/androidStudio.png",
+                                "Android Studio"),
+                            myspec("assets/images/xcode.png", "XCode")
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            myspec("assets/images/asana.png", "Asana"),
+                            myspec("assets/images/jira.png", "Jira"),
+                            myspec("assets/images/slack.png", "Slack")
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            myspec("assets/images/markdown.png", "Markdown"),
+                            myspec("assets/images/googlePlayStore.png",
+                                "Play Store"),
+                            myspec("assets/images/appStore.png", "App Store"),
+                          ],
+                        ),
+                        // Container(height: 200),
+                      ],
+                    )
+                  ],
+                ),
               ));
         },
       ),
