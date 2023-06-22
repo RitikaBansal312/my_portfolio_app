@@ -78,31 +78,42 @@ class _AboutPageState extends State<AboutPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            launch("https://instagram.com");
+                          },
                           icon: Icon(
                             FontAwesomeIcons.instagram,
                             color: Colors.white,
                           )),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            launch(
+                                "https://www.linkedin.com/in/ritika-bansal-45a265178/");
+                          },
                           icon: Icon(
                             FontAwesomeIcons.linkedin,
                             color: Colors.white,
                           )),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            launch("https://github.com/RitikaBansal312");
+                          },
                           icon: Icon(
                             FontAwesomeIcons.github,
                             color: Colors.white,
                           )),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            launch("https://twitter.com/ritikabansal315");
+                          },
                           icon: Icon(
                             FontAwesomeIcons.twitter,
                             color: Colors.white,
                           )),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            launch("https://facebook.com");
+                          },
                           icon: Icon(
                             FontAwesomeIcons.facebook,
                             color: Colors.white,
